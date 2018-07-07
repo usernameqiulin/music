@@ -1,0 +1,397 @@
+{
+    "@platforms": ["android", "iPhone", "iPad"],
+    "id": "H551E3B52",/*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name": "music",/*应用名称，程序桌面图标名称*/
+    "version": {
+        "name": "1.0",/*应用版本名称*/
+        "code": ""
+    },
+    "description": "",/*应用描述信息*/
+    "icons": {
+        "72": "icon.png"
+    },
+    "launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer": {
+        "name": "",/*开发者名称*/
+        "email": "",/*开发者邮箱地址*/
+        "url": ""/*开发者个人主页地址*/
+    },
+    "permissions": {
+        
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "OAuth":{}
+    },
+    "plus": {
+        "splashscreen": {
+            "autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting": true/*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
+        },
+        "popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+        "runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+        "distribute": {
+            "apple": {
+                "appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision": "",/*iOS应用打包配置文件*/
+                "password": "",/*iOS应用打包个人证书导入密码*/
+                "p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks":[
+                ]/*调用Native.js调用原生Objective-c API需要引用的FrameWork，如需调用GameCenter，则添加"GameKit.framework"*/
+            },
+            "google": {
+                "packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore": "",/*Android应用打包使用的密���库文件*/
+                "password": "",/*Android应用打包使用密钥库中证书的密码*/
+                "aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+               "permissions": ["<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.INTERNET\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>"]
+				/*使用Native.js调用原生安卓API需要使用到的系统权限*/
+            },
+            "orientation": [
+                "portrait-primary"
+            ],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons": {
+                "ios": {
+                    "prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+                     /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone": {
+                        "normal": "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+                        "retina": "", /*iPhone4程序图标，分辨率：114x114*/
+                        "retina7": "", /*iPhone4S/5/6程序图标，分辨率：120x120*/
+			"retina8": "", /*iPhone6 Plus程序图标，分辨率：180x180*/
+                        "spotlight-normal": "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina": "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+                        "spotlight-retina7": "", /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "", /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+			"settings-retina8": "" /*iPhone6Plus设置页面程序图标，分辨率：87x87*/
+                    },
+                    "ipad": {
+                        "normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+                        "normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
+                        "retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+                        "spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+                        "spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
+                    },"appstore":"C:/Users/qiulin/Pictures/Screenshots/屏幕截图(1).png"
+                },
+                "android": {
+                    "mdpi": "", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi": "", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi": "", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi": ""/*1080P 高分屏程序图标，分辨率：144x144*/
+                }
+            },
+            "splashscreen": {
+                "ios": {
+                    "iphone": {
+                        "default": "", /*iPhone3启动图片选，分辨率：320x480*/
+                        "retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40": "",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+                        "retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+                        "retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+                        "retina55l": ""/*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
+                    },
+                    "ipad": {
+                        "portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7": ""/*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
+                    }
+                },
+                "android": {
+                    "mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi": "", /*大屏启动图片，分辨率：320x442*/
+                    "hdpi": "", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi": ""/*1080P高分屏启动图片，分辨率：1080x1882*/
+                }
+            }
+        },"ads":{"rp":true,"splash":true,"push":true},"adid":""
+    },
+	"dependencies":{
+		"pages": {
+			"index.html": {
+				"href": "index.html",
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"src/base/song-list/song-list.vue",
+				"src/common/image/default.png",
+				"src/store/mutation-types.js",
+				"src/components/m-header/logo@3x.png",
+				"src/base/switches/switches.vue",
+				"src/components/top-list/top-list.vue",
+				"package.json",
+				"src/common/stylus/base.styl",
+				"dist/static/js/2.5cd3384254927a88991e.js",
+				"src/common/js/singer.js",
+				"src/base/no-result/no-result.vue",
+				"src/base/no-result/no-result@3x.png",
+				"config/dev.env.js",
+				"src/base/search-box/search-box.vue",
+				"src/components/search/search.vue",
+				"README.md",
+				"src/base/loading/loading.gif",
+				"dist/static/js/7.31961aaaeae5b665e7ca.js",
+				"dist/static/js/1.bb7f6beeb1f3ade2e11c.js.map",
+				"src/base/progress-circle/progress-circle.vue",
+				"static/5.png",
+				"build/webpack.dev.conf.js",
+				"src/common/js/jsonp.js",
+				"dist/static/js/3.cb4675bc0e7ca4003299.js.map",
+				"src/store/mutations.js",
+				"src/base/progress-bar/progress-bar.vue",
+				"src/base/song-list/second@2x.png",
+				"src/main.js",
+				"dist/static/js/1.bb7f6beeb1f3ade2e11c.js",
+				"src/components/rank/rank.vue",
+				"src/api/config.js",
+				"config/index.js",
+				"dist/static/img/music-icon.8a34857.svg",
+				"src/base/confirm/confirm.vue",
+				"dist/static/js/6.7220b29f0a6f1bf00629.js.map",
+				"src/components/disc/disc.vue",
+				"src/base/song-list/first@2x.png",
+				"src/common/stylus/icon.styl",
+				"dist/static/js/5.638199cfdd4f9eebb9c4.js",
+				"src/base/loading/loading.vue",
+				"dist/static/5.png",
+				"src/common/fonts/music-icon.ttf",
+				"src/components/recommend/recommend.vue",
+				"prod.server.js",
+				"dist/static/css/app.cf0bbb425348204f6d41c02eb7310784.css",
+				"src/api/rank.js",
+				"src/base/slider/slider.vue",
+				"src/common/fonts/music-icon.woff",
+				"src/App.vue",
+				"config/prod.env.js",
+				"build/webpack.base.conf.js",
+				"src/store/getters.js",
+				"build/dev-client.js",
+				"src/components/m-header/m-header.vue",
+				"src/base/song-list/third@2x.png",
+				"src/components/add-song/add-song.vue",
+				"dist/static/js/4.6c7b4e449a96ff78267e.js.map",
+				"dist/static/js/4.6c7b4e449a96ff78267e.js",
+				"dist/static/1.png",
+				"src/common/js/cache.js",
+				"src/components/m-header/logo@2x.png",
+				"static/3.png",
+				"dist/static/js/manifest.8c9ce2576077b8f85260.js.map",
+				"dist/static/js/app.69ba45b432e43a027c87.js",
+				"src/common/fonts/music-icon.svg",
+				"src/base/search-list/search-list.vue",
+				"dist/static/js/0.d1f25ba1f7e08d8af163.js.map",
+				"src/api/recommend.js",
+				"dist/static/js/manifest.8c9ce2576077b8f85260.js",
+				"src/common/stylus/variable.styl",
+				"dist/static/js/5.638199cfdd4f9eebb9c4.js.map",
+				"代码地址-github",
+				"src/components/singer/singer.vue",
+				"src/store/index.js",
+				"src/store/actions.js",
+				"src/common/js/util.js",
+				"build/check-versions.js",
+				"dist/static/css/app.cf0bbb425348204f6d41c02eb7310784.css.map",
+				"src/components/playlist/playlist.vue",
+				"src/common/fonts/music-icon.eot",
+				"src/base/no-result/no-result@2x.png",
+				"src/common/js/mixin.js",
+				"dist/static/img/no-result@3x.2858208.png",
+				"src/common/stylus/reset.styl",
+				"dist/static/js/2.5cd3384254927a88991e.js.map",
+				"src/components/player/player.vue",
+				"src/base/top-tip/top-tip.vue",
+				"dist/static/js/7.31961aaaeae5b665e7ca.js.map",
+				"src/base/song-list/third@3x.png",
+				"src/common/js/config.js",
+				"dist/static/4.png",
+				"dist/static/js/0.d1f25ba1f7e08d8af163.js",
+				"src/components/tab/tab.vue",
+				"src/components/suggest/suggest.vue",
+				"src/common/js/dom.js",
+				"src/base/scroll/scroll.vue",
+				"src/common/stylus/mixin.styl",
+				"static/1.png",
+				"dist/static/js/6.7220b29f0a6f1bf00629.js",
+				"dist/index.html",
+				"src/base/song-list/second@3x.png",
+				"build/utils.js",
+				"dist/static/2.png",
+				"src/components/music-list/music-list.vue",
+				"src/router/index.js",
+				"src/common/js/song.js",
+				"build/dev-server.js",
+				"build/vue-loader.conf.js",
+				"src/store/state.js",
+				"src/common/stylus/index.styl",
+				"src/api/song.js",
+				"src/api/search.js",
+				"build/build.js",
+				"src/base/listview/listview.vue",
+				"dist/static/js/app.69ba45b432e43a027c87.js.map",
+				"dist/static/3.png",
+				"src/components/user-center/user-center.vue",
+				"dist/static/js/3.cb4675bc0e7ca4003299.js",
+				"static/4.png",
+				"static/2.png",
+				"src/api/singer.js",
+				"yarn.lock",
+				"build/webpack.prod.conf.js",
+				"src/base/song-list/first@3x.png",
+				"src/components/singer-detail/singer-detail.vue"
+			]
+		}
+	},
+	"unpackage":[
+	  "build/build.js",
+	  "build/check-versions.js",
+	  "build/dev-client.js",
+	  "build/dev-server.js",
+	  "build/utils.js",
+	  "build/vue-loader.conf.js",
+	  "build/webpack.base.conf.js",
+	  "build/webpack.dev.conf.js",
+	  "build/webpack.prod.conf.js",
+	  "config/dev.env.js",
+	  "config/index.js",
+	  "config/prod.env.js",
+	  "dist/index.html",
+	  "dist/static/1.png",
+	  "dist/static/2.png",
+	  "dist/static/3.png",
+	  "dist/static/4.png",
+	  "dist/static/5.png",
+	  "dist/static/css/app.cf0bbb425348204f6d41c02eb7310784.css",
+	  "dist/static/css/app.cf0bbb425348204f6d41c02eb7310784.css.map",
+	  "dist/static/img/music-icon.8a34857.svg",
+	  "dist/static/img/no-result@3x.2858208.png",
+	  "dist/static/js/0.d1f25ba1f7e08d8af163.js",
+	  "dist/static/js/0.d1f25ba1f7e08d8af163.js.map",
+	  "dist/static/js/1.bb7f6beeb1f3ade2e11c.js",
+	  "dist/static/js/1.bb7f6beeb1f3ade2e11c.js.map",
+	  "dist/static/js/2.5cd3384254927a88991e.js",
+	  "dist/static/js/2.5cd3384254927a88991e.js.map",
+	  "dist/static/js/3.cb4675bc0e7ca4003299.js",
+	  "dist/static/js/3.cb4675bc0e7ca4003299.js.map",
+	  "dist/static/js/4.6c7b4e449a96ff78267e.js",
+	  "dist/static/js/4.6c7b4e449a96ff78267e.js.map",
+	  "dist/static/js/5.638199cfdd4f9eebb9c4.js",
+	  "dist/static/js/5.638199cfdd4f9eebb9c4.js.map",
+	  "dist/static/js/6.7220b29f0a6f1bf00629.js",
+	  "dist/static/js/6.7220b29f0a6f1bf00629.js.map",
+	  "dist/static/js/7.31961aaaeae5b665e7ca.js",
+	  "dist/static/js/7.31961aaaeae5b665e7ca.js.map",
+	  "dist/static/js/app.69ba45b432e43a027c87.js",
+	  "dist/static/js/app.69ba45b432e43a027c87.js.map",
+	  "dist/static/js/manifest.8c9ce2576077b8f85260.js",
+	  "dist/static/js/manifest.8c9ce2576077b8f85260.js.map",
+	  "src/App.vue",
+	  "src/api/config.js",
+	  "src/api/rank.js",
+	  "src/api/recommend.js",
+	  "src/api/search.js",
+	  "src/api/singer.js",
+	  "src/api/song.js",
+	  "src/base/confirm/confirm.vue",
+	  "src/base/listview/listview.vue",
+	  "src/base/loading/loading.gif",
+	  "src/base/loading/loading.vue",
+	  "src/base/no-result/no-result.vue",
+	  "src/base/no-result/no-result@2x.png",
+	  "src/base/no-result/no-result@3x.png",
+	  "src/base/progress-bar/progress-bar.vue",
+	  "src/base/progress-circle/progress-circle.vue",
+	  "src/base/scroll/scroll.vue",
+	  "src/base/search-box/search-box.vue",
+	  "src/base/search-list/search-list.vue",
+	  "src/base/slider/slider.vue",
+	  "src/base/song-list/first@2x.png",
+	  "src/base/song-list/first@3x.png",
+	  "src/base/song-list/second@2x.png",
+	  "src/base/song-list/second@3x.png",
+	  "src/base/song-list/song-list.vue",
+	  "src/base/song-list/third@2x.png",
+	  "src/base/song-list/third@3x.png",
+	  "src/base/switches/switches.vue",
+	  "src/base/top-tip/top-tip.vue",
+	  "src/common/fonts/music-icon.eot",
+	  "src/common/fonts/music-icon.svg",
+	  "src/common/fonts/music-icon.ttf",
+	  "src/common/fonts/music-icon.woff",
+	  "src/common/image/default.png",
+	  "src/common/js/cache.js",
+	  "src/common/js/config.js",
+	  "src/common/js/dom.js",
+	  "src/common/js/jsonp.js",
+	  "src/common/js/mixin.js",
+	  "src/common/js/singer.js",
+	  "src/common/js/song.js",
+	  "src/common/js/util.js",
+	  "src/common/stylus/base.styl",
+	  "src/common/stylus/icon.styl",
+	  "src/common/stylus/index.styl",
+	  "src/common/stylus/mixin.styl",
+	  "src/common/stylus/reset.styl",
+	  "src/common/stylus/variable.styl",
+	  "src/components/add-song/add-song.vue",
+	  "src/components/disc/disc.vue",
+	  "src/components/m-header/logo@2x.png",
+	  "src/components/m-header/logo@3x.png",
+	  "src/components/m-header/m-header.vue",
+	  "src/components/music-list/music-list.vue",
+	  "src/components/player/player.vue",
+	  "src/components/playlist/playlist.vue",
+	  "src/components/rank/rank.vue",
+	  "src/components/recommend/recommend.vue",
+	  "src/components/search/search.vue",
+	  "src/components/singer/singer.vue",
+	  "src/components/singer-detail/singer-detail.vue",
+	  "src/components/suggest/suggest.vue",
+	  "src/components/tab/tab.vue",
+	  "src/components/top-list/top-list.vue",
+	  "src/components/user-center/user-center.vue",
+	  "src/main.js",
+	  "src/router/index.js",
+	  "src/store/actions.js",
+	  "src/store/getters.js",
+	  "src/store/index.js",
+	  "src/store/mutation-types.js",
+	  "src/store/mutations.js",
+	  "src/store/state.js",
+	  "static/1.png",
+	  "static/2.png",
+	  "static/3.png",
+	  "static/4.png",
+	  "static/5.png",
+	  "package.json",
+	  "prod.server.js",
+	  "yarn.lock"
+	]
+}
